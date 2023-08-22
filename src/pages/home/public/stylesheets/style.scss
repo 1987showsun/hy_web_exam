@@ -1,0 +1,19 @@
+.home-header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    >div{
+        display: inline-flex;
+        align-self: center;
+    }
+}
+
+.shorts-list-item-button{
+    width: 100%;
+    height: 100%;
+}

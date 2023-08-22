@@ -1,0 +1,29 @@
+.list-container{
+    display: flex;
+    flex: 8;
+    overflow: auto;
+    container: shortslist / inline-size;
+    .shorts-wrap{
+        width: 100%;
+        display: grid;
+        .list-item{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@container shortslist (max-width: 600px) {
+    $gap : 10px;
+    .shorts-wrap{
+        padding: $gap;
+        gap: $gap;
+        grid-template-columns: repeat(2, 2fr);
+        .list-item{
+            // width: calc((100% / 2)-($gap / 2)) !important;
+        }
+    }
+}

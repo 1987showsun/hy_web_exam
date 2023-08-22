@@ -1,0 +1,92 @@
+.video-js{
+    background: #000;
+}
+
+.player-wrap{
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+    >div{
+        width: 100% !important;
+        height: 100% !important;
+        video-js{
+            height: 100% !important;
+            padding: 0px !important;
+        }
+    }
+
+    .volume-button{
+        height: 35px;
+        border-radius: 4px;
+        padding: 0px 10px;
+        position: absolute;
+        z-index: 10;
+        top: 100px;
+        left: 10px;
+        background: rgba(255, 255, 255, .7);
+    }
+
+    .mask-wrap{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        top: 0px;
+        left: 0px;
+        .play-induction-wrap{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .play-icon-wrap{
+                width: 50px;
+                height: 50px;
+                margin: -25px 0 0 -25px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: rgba(255, 255, 255, .8);
+            }
+        }
+        .player-timeLine{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            overflow: hidden;
+            .player-timeLine-mask{
+                width: 100%;
+                height: 5px;
+                background: rgba(255, 255, 255, .5);
+                border-radius: 20px;
+                .player-timeLine-CurrentTime{
+                    width: 20%;
+                    height: 100%;
+                    background: red;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    &:after{
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100px;
+                        margin-right: -5px;
+                        display: block;
+                        position: absolute;
+                        right: 0%;
+                        background: red;
+                    }
+                }
+            }
+            &[data-play="false"]{
+                height: 40px;
+                padding: 0px 15px;
+            }
+            &[data-play="true"]{
+                height: 5px;
+            }
+        }
+    }
+}

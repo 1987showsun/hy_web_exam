@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
+import { Outlet } from "react-router-dom";
 
-function App() {
+// Components
+import Nav from "./components/common/nav";
+
+import "./public/stylesheets/style.scss";
+
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <Outlet />
+      </main>
+      <Nav />
+    </>
   );
-}
-
-export default App;
+};
